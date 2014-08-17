@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>	
+	<link rel="stylesheet" href="cssHojaDeVida.css">
+	<script>		
+		function myClick(obj){
+			var p = obj.parentNode;
+			var list = p.getElementsByTagName('li');
+			for(i=0;i<list.length;i++){
+				list[i].className = "";
+			}
+			obj.className = "seleccionado";			
+			var x=obj.getAttribute("id");
+			switch(x){				
+				case "a1":					
+					var lt = document.getElementById("principal").getElementsByTagName("div");
+					for(i=0;i<lt.length;i++){
+						lt[i].style.display = "none";
+					}
+					document.getElementById("l1").style.visibility="visible";
+					document.getElementById("l1").style.display="block";
+					break;
+				case "a2":
+					var lt = document.getElementById("principal").getElementsByTagName("div");
+					for(i=0;i<lt.length;i++){
+						lt[i].style.display = "none";
+					}
+					document.getElementById("l2").style.visibility="visible";
+					document.getElementById("l2").style.display="block";
+					break;
+				
+			}
+		}					
+	</script>
+</head>
+<body>
+<div id="contenedor">
+	<div id="cabecera">
+		<h1 id="logo">Portfolio - Josué Macías</h1>
+
+		<div class="clear"></div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li id="a1" class="seleccionado" onclick="myClick(this)"><a href="#">Información general</a></li>
+			<li id="a2" onclick="myClick(this)"><a href="#">Ilustraciones</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div id="contenido">
+		<div id="principal">
+			<div id="l1" style="visibility:visible" class="articulo">
+				<h2>Información general</h2>
+				<ul>
+					<li>Nombre: Josué</li>
+					<li>Apellidos: Macías Méndez</li>
+					<li>Lugar y fecha de nacimiento: Guayaquil, 23 de Septiembre de 1989</li>
+					
+					<li>Celular: 0999195243</li>
+					<li>Teléfono: 042551551</li>
+					<li>Correo: josue_gin@hotmail.com</li>
+				</ul>	
+			</div>
+			<div id="l2" style="display:none" class="articulo">
+				<h2>Ilustraciones</h2>
+				<ul>
+					<a href="1.html"><img style="width:25%;height: 150px;" src="imagenes/10353365_628378770579610_6821178082044382001_o.jpg" /></a>
+					<a href="2.html"><img style="height: 150px;" src="imagenes/Burn the Goblin - Magic the gathering try.png" /></a>
+					<a href="3.html"><img style="height: 150px;" src="imagenes/Conscience.png" /></a>
+					<a href="4.html"><img style="height: 150px;" src="imagenes/The joker and a bat.png" /></a>
+					<a href="5.html"><img style="height: 150px;" src="imagenes/The joker the new 52.png" /></a>
+					<a href="6.html"><img style="height: 150px;" src="imagenes/Thebatking.jpg" /></a>
+					<a href="7.html"><img style="height: 150px;" src="imagenes/Prometheus.png" /></a>
+					<a href="8.html"><img style="height: 150px;" src="imagenes/Peter Bishop.png" /></a>
+					<a href="9.html"><img style="height: 150px;" src="imagenes/Walter Bishop.png" /></a>
+					<a href="10.html"><img style="height: 150px;" src="imagenes/Mustam.jpg" /></a>
+					<a href="11.html"><img style="height: 150px;" src="imagenes/ginbunny pin.png" /></a>
+					<a href="12.html"><img style="height: 150px;" src="imagenes/ink the joker and a bat.png" /></a>
+					<a href="13.html"><img style="height: 150px;" src="imagenes/Deviant4.png" /></a>
+					<a href="14.html"><img style="height: 150px;" src="imagenes/Deviant1.png" /></a>
+					<a href="15.html"><img style="height: 150px;" src="imagenes/Deviant2.png" /></a>
+					<a href="16.html"><img style="height: 150px;" src="imagenes/Deviant3.png" /></a>
+					<a href="17.html"><img style="height: 150px;" src="imagenes/la pie de mi pais 1.png" /></a>
+					<a href="18.html"><img style="height: 150px;" src="imagenes/gin_plasticine_by_necrobaph-d3gtbgn.jpg" /></a>
+					<a href="19.html"><img style="height: 150px;" src="imagenes/la piel de mi pais 10.png" /></a>
+					<a href="20.html"><img style="height: 150px;" src="imagenes/red_little_bad_demon_by_necrobaph-d4pbjrw.jpg" /></a>
+					<a href="21.html"><img style="height: 150px;" src="imagenes/ginfruit.png" /></a>
+					
+					
+
+					
+				</ul>	
+			</div>
+			
+		</div>
+		<div id="secundario">
+			<h3>Follow me</h3>
+			<ul id="categorias">
+				<li class="seleccionado" onclick="myClick(this)"><a target="blank" href="https://www.facebook.com/pages/Josu%C3%A9-Mac%C3%ADas/265408973543260?ref=ts&fref=ts">Facebook</a></li>
+				<li onclick="myClick(this)"><a target="blank" href="https://www.behance.net/jbaph">Behance</a></li>
+				<li onclick="myClick(this)"><a target="blank" href="http://instagram.com/necrobaph/">Instagram</a></li>
+				<li onclick="myClick(this)"><a target="blank" href="http://necrobaph.deviantart.com/">DeviantArt</a></li>
+				<li onclick="myClick(this)"><a target="blank" href="http://drawcrowd.com/josuegin9ae5">DrawCrowd</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>	
+	<div id="pie">
+		<p id="copyright"></p>
+	</div>
+</div>
+</body>
+</html>
